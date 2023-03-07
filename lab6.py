@@ -12,7 +12,19 @@ def encode_password(password):
 
 
 # Define the decoder function
-
+# Joe Kan
+def decode(password):
+    new_password = ""
+    for i in range(len(password)):
+        if password[i] == "2":
+	    new_password += "9"
+	elif password[i] == "1":
+	    new_password += "8"
+	elif password[i] == "0":
+	    new_password += "7"
+	else:
+	    new_password += str(int(password[i]) - 3)
+    return new_password
 
 
 # Define the main function
@@ -34,7 +46,9 @@ def main():
             print("Your password has been encoded and stored!")
         elif option == "2":
             # Partner decodes password
-            
+            # Joe Kan
+	    decoded_password = decode(encoded_password)
+	    print("The encoded password is " + encoded_password + ", and the original password is " + decoded_password + ".")
         elif option == "3":
             break
         else:
