@@ -1,3 +1,4 @@
+# Malika Saidmuradova 03/07/2023 
 menu_options = ["Encode", "Decode", "Quit"]
 
 
@@ -37,9 +38,8 @@ def main():
             encoded_password = encode_password(password)
             print("Your password has been encoded and stored!")
         elif option == "2":
-            encoded_password = input("Please enter your password to decode: ")
-            decoded_password = decode_password(encoded_password)
-            print(f"Your decoded password is: {decoded_password}")
+            # Partner decodes password
+            
         elif option == "3":
             break
         else:
